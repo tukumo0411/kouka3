@@ -8,10 +8,11 @@
 @endsection
 @section('content')
    <table>
-   <tr><th>Name(Age)</th><th>Mail</th></tr>
+   <tr><th>Name</th><th>Mail</th></tr><th>password</th>
        <tr>
            <td>{{$item->getData()}}</td>
            <td>{{$item->mail}}</td>
+           <td>{{$item->password}}</td>
        </tr>
    </table>
 @endsection

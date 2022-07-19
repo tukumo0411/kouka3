@@ -12,11 +12,12 @@ class Person extends Model
    public static $rules = array(
       'name' => 'required',
       'mail' => 'email',
+      'password' => 'password',
    );
 
    // getDataは残しておく
    public function getData()
    {
-      return $this->id . ': ' . $this->name . ' (' . $this->age . ')';
+      return $this->id . ': ' . $this->name . ' (' . $this->password . ')';
    }
 }

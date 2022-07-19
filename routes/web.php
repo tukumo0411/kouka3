@@ -25,3 +25,7 @@ Route::get('kouka3/edit', 'Kouka3Controller@edit');
 Route::post('kouka3/update', 'Kouka3Controller@update');
 Route::get('kouka3/del', 'Kouka3Controller@del');
 Route::post('kouka3/remove', 'Kouka3Controller@remove');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

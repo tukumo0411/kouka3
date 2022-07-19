@@ -24,8 +24,8 @@
          value="{{$item->name}}"></td></tr>
       <tr><th>mail: </th><td><input type="text" name="mail"
          value="{{$item->mail}}"></td></tr>
-      <tr><th>age: </th><td><input type="text" name="age"
-         value="{{$item->age}}"></td></tr>
+      <tr><th>password: </th><td><input type="text" name="password"
+         value="{{$item->password}}"></td></tr>
       <tr><th></th><td><input type="submit"
          value="更新"></td></tr>
    </table>
