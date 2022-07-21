@@ -16,13 +16,14 @@
     </ul>
 </div>
 @endif
+<!--入力枠の表示-->
    <form action="/kouka3/update" method="post">
    <table>
       @csrf
       <input type="hidden" name="id" value="{{$item->id}}">
-      <tr><th>name: </th><td><input type="text" name="data"
+      <tr><th>日付: </th><td><input type="text" name="data"
          value="{{$item->data}}"></td></tr>
-      <tr><th>mail: </th><td><input type="text" name="data"
+      <tr><th>メモ: </th><td><input type="text" name="memo"
          value="{{$item->memo}}"></td></tr>
       <tr><th></th><td><input type="submit"
          value="更新"></td></tr>

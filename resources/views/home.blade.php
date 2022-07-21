@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    成功しました。
+                    You are logged in!
                 </div>
             </div>
         </div>

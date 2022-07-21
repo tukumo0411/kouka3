@@ -10,14 +10,13 @@ class Person extends Model
    protected $guarded = array('id');
 
    public static $rules = array(
-      'name' => 'required',
-      'mail' => 'email',
-      'password' => 'password',
+      'data' => 'required',
+      'memo' => 'required',
    );
 
    // getDataは残しておく
-   public function getData()
-   {
-      return $this->id . ': ' . $this->name . ' (' . $this->password . ')';
-   }
+   //public function getData()
+   //{
+   //   return $this->id . ': ' . $this->data . ' (' . $this->memo . ')';
+  // }
 }

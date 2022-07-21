@@ -16,6 +16,7 @@
     </ul>
 </div>
 @endif
+<!--入力枠の表示-->
    <form action="/kouka3/create" method="post">
    <table>
       @csrf

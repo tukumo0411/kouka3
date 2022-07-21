@@ -8,9 +8,10 @@
 @endsection
 @section('content')
    <table>
-   <tr><th>data</th><th>memo</th></tr>
+    <!--テーブルの表示-->
+   <tr><th>日付</th><th>メモ</th></tr>
        <tr>
-           <td>{{$item->getData()}}</td>
+           <td>{{$item->data}}</td>
            <td>{{$item->memo}}</td>
        </tr>
    </table>

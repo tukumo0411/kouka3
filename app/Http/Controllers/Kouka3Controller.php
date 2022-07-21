@@ -4,13 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Person;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
+
 
 class kouka3Controller extends Controller
 {
     public function index(Request $request)
     {
-        $items = Person::all();
-        $param = ['input' => '','items' => $items];
+        $user = Auth::user();
+
+        $sort = $request->sort;
+     
+        $items = DB::table('people')->Paginate(5);
+     
+        $param = ['items' => $items, 'sort' => $sort, 'user' => $user];
         return view('kouka3.index', $param);
     }
 
