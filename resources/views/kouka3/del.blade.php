@@ -3,7 +3,7 @@
 @section('title', 'kouka')
 
 @section('menu_title')
-ユーザ情報削除画面
+メモ削除
 @endsection
 
 @section('content')
@@ -11,14 +11,9 @@
    <table>
       @csrf
       <input type="hidden" name="id" value="{{$item->id}}">
-      <tr><th>name: </th><td>{{$item->name}}</td></tr>
-      <tr><th>mail: </th><td>{{$item->mail}}</td></tr>
-      <tr><th>password: </th><td>{{$item->password}}</td></tr>
+      <tr><th>data: </th><td>{{$item->data}}</td></tr>
+      <tr><th>memo: </th><td>{{$item->memo}}</td></tr>
       <tr><th></th><td><input type="submit" value="削除"></td></tr>
    </table>
    </form>
-@endsection
-
-@section('footer')
-copyright 2020 東京情報クリエイター工学院専門学校.
 @endsection

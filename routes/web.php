@@ -16,15 +16,15 @@ Route::get('/', function () {
 });
 
 //効果測定3
-Route::get('kouka3', 'Kouka3Controller@index');
-Route::post('kouka3/find', 'Kouka3Controller@find');
-Route::get('kouka3/show', 'Kouka3Controller@show');
-Route::get('kouka3/add', 'Kouka3Controller@add');
-Route::post('kouka3/create', 'Kouka3Controller@create');
-Route::get('kouka3/edit', 'Kouka3Controller@edit');
-Route::post('kouka3/update', 'Kouka3Controller@update');
-Route::get('kouka3/del', 'Kouka3Controller@del');
-Route::post('kouka3/remove', 'Kouka3Controller@remove');
+Route::get('kouka3', 'Kouka3Controller@index')->middleware('auth');
+Route::post('kouka3/find', 'Kouka3Controller@find')->middleware('auth');;
+Route::get('kouka3/show', 'Kouka3Controller@show')->middleware('auth');;
+Route::get('kouka3/add', 'Kouka3Controller@add')->middleware('auth');;
+Route::post('kouka3/create', 'Kouka3Controller@create')->middleware('auth');;
+Route::get('kouka3/edit', 'Kouka3Controller@edit')->middleware('auth');;
+Route::post('kouka3/update', 'Kouka3Controller@update')->middleware('auth');;
+Route::get('kouka3/del', 'Kouka3Controller@del')->middleware('auth');;
+Route::post('kouka3/remove', 'Kouka3Controller@remove')->middleware('auth');;
 
 Auth::routes();
 

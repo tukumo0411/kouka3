@@ -3,7 +3,7 @@
 @section('title', 'kouka')
 
 @section('menu_title')
-ユーザ情報一覧画面
+メモ一覧
 @endsection
 
 @section('content')
@@ -14,20 +14,15 @@
     </form>
    <a href="/kouka3/add">新規登録</a>
    <table>
-   <tr><th>Name</th><th>Mail</th><th>password</th><th>Select</th><th>Update</th><th>Delete</th></tr>
+   <tr><th>日付</th><th>メモ</th>
    @foreach ($items as $item)
        <tr>
            <td>{{$item->getData()}}</td>
-           <td>{{$item->mail}}</td>
-           <td>{{$item->password}}</td>
+           <td>{{$item->memo}}</td>
            <td><a href="/kouka3/show?id={{$item->id}}">詳細</a></td>
            <td><a href="/kouka3/edit?id={{$item->id}}">更新</a></td>
            <td><a href="/kouka3/del?id={{$item->id}}">削除</a></td>
        </tr>
    @endforeach
    </table>
-@endsection
-
-@section('footer')
-copyright 2020 東京情報クリエイター工学院専門学校.
 @endsection

@@ -3,20 +3,15 @@
 @section('title', 'kouka')
 
 @section('menu_title')
-ユーザ情報詳細画面
+メモの詳細
 
 @endsection
 @section('content')
    <table>
-   <tr><th>Name</th><th>Mail</th></tr><th>password</th>
+   <tr><th>data</th><th>memo</th></tr>
        <tr>
            <td>{{$item->getData()}}</td>
-           <td>{{$item->mail}}</td>
-           <td>{{$item->password}}</td>
+           <td>{{$item->memo}}</td>
        </tr>
    </table>
-@endsection
-
-@section('footer')
-copyright 2020 東京情報クリエイター工学院専門学校.
 @endsection
